@@ -1,9 +1,9 @@
-
+/* by default mobile html should not be displayed */
 .mobile {
     display: none;
 }
 
-
+/* reset body to defualt */
 body * {
     margin: 0;
     padding: 0;
@@ -12,6 +12,7 @@ body * {
     color: white;
 }
 
+
 body {
     font-family: 'Coolvetica', sans-serif;
     height: 100%;
@@ -19,6 +20,7 @@ body {
     color: white;
 }
 
+/* Navigation bar */
 nav {
     display: flex;
     align-items: center;
@@ -29,6 +31,7 @@ nav {
     z-index: 1000;
 }
 
+/* Navigation list */
 .nav_list {
     display: flex;
     justify-content: center;
@@ -36,7 +39,7 @@ nav {
     flex-grow: 1;
 }
 
-
+/* Navigation list items */
 .nav_list ul {
     display: flex;
     list-style: none;
@@ -45,11 +48,13 @@ nav {
     font-size: 2vw;
 }
 
+/* Navigation list items */
 .nav_list li {
     margin: 0 1.5vw; 
     
 }
 
+/* Navigation list links */
 .nav_list a {
     padding: 10px 20px 10px 20px;
     border-radius: 15px;
@@ -57,19 +62,22 @@ nav {
     
 }
 
+/* Navigation active page */
 .active-page{
     color: red;
 }
 
+/* Navigation item hover */
 .nav_list a:hover {
     outline: 3px solid white;
 }
 
 
-
+/* Logo upper left */
 .logo {
     font-size: 3vw;  
 }
+
 
 header {
     display: flex;
@@ -80,36 +88,41 @@ header {
     text-align: left;
 }
 
+/* Title */
 .titles {
     display: flex;
     flex-direction: column;
     align-items: flex-start; 
 }
 
-.titles h1, .titles h2 {
+/*font size for h1*/
+.titles h1 {
     font-size: 7vw;
     margin: 0; 
     padding: 0px 20px; 
 }
 
 
-
+/*extra styling for h2*/
 .titles h2 {
-    font-size: 11vw; /* Larger size for h2 */
+    font-size: 11vw; 
     padding: 20px;
     outline: 3px solid white;
     border-radius: 40px;
     width: fit-content;
+    margin: 0; 
+    padding: 0px 20px; 
 
 }
 
+/*red dot h2*/
 .titles h2 span, .logo span {
     color: red;
 }
 
 
 
-
+/* smaller Desktop view (tablet) */
 @media screen and (max-width: 920px){
     body {
         height: 100vh;
@@ -145,7 +158,7 @@ header {
 
 
   
-
+/* Mobile view */
 @media screen and (max-width: 770px) {
     body {
         height: 100vh;
@@ -163,10 +176,9 @@ header {
     header {
         font-size: 3vh;
         height: auto;
-        padding-top: 15vh; /* Adjusted padding top */
-        padding-bottom: 10vh; /* Added padding bottom */
-        position: relative; /* Added position relative */
-    }
+        padding-top: 15vh; 
+        padding-bottom: 10vh; 
+        position: relative;
 
     h1 {
         display: none;
@@ -174,16 +186,16 @@ header {
 
     .titles {
         position: absolute;
-        top: 25vh; /* Adjusted top position */
-        left: 5%; /* Aligned to the left */
-        transform: translate(0%, -50%); /* Center the title vertically */
+        top: 25vh; 
+        left: 5%; 
+        transform: translate(0%, -50%); 
     }
 
     .titles h2 {
         font-size: 20vw;
         outline: none;
         padding: 0;
-        text-align: left; /* Align text to the left */
+        text-align: left; 
     }
 
     nav{
@@ -191,10 +203,10 @@ header {
     }
     .nav_list {
         position: absolute;
-        width: 100%; /* Occupy full width */
-        background-color: black; /* Ensuring visibility */
-        top: 65%; /* Adjusted top position */
-        transform: translateY(-50%); /* Center the menu vertically */
+        width: 100%; 
+        background-color: black; 
+        top: 65%; 
+        transform: translateY(-50%); 
         
     }
 
@@ -209,20 +221,20 @@ header {
     }
 
     .nav_list li {
-        margin: 0 0px; /* Reduced margin */
+        margin: 0 0px; 
     }
 
     .nav_list a {
         position: relative;
-        transition: none; /* Remove transition */
+        transition: none;
         
         top: -4vh;
     }
 
     .nav_list a:hover {
-        outline: none; /* Remove outline on hover */
+        outline: none;
         color: red;
-        transition: left 0.3s ease-in-out; /* Add transition */
+        transition: left 0.3s ease-in-out;
 
     }
 
@@ -235,3 +247,4 @@ header {
 
 
 
+}
