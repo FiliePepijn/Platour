@@ -1,0 +1,237 @@
+
+.mobile {
+    display: none;
+}
+
+
+body * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none; 
+    color: white;
+}
+
+body {
+    font-family: 'Coolvetica', sans-serif;
+    height: 100%;
+    background-color: black;
+    color: white;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 2vh 1vw; 
+    top: 0;
+    z-index: 1000;
+}
+
+.nav_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+
+.nav_list ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-grow: 1; 
+    font-size: 2vw;
+}
+
+.nav_list li {
+    margin: 0 1.5vw; 
+    
+}
+
+.nav_list a {
+    padding: 10px 20px 10px 20px;
+    border-radius: 15px;
+    transition: outline 0.3s ease-in-out;
+    
+}
+
+.active-page{
+    color: red;
+}
+
+.nav_list a:hover {
+    outline: 3px solid white;
+}
+
+
+
+.logo {
+    font-size: 3vw;  
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: flex-start;
+    padding: 3vh 10vw;
+    text-align: left;
+}
+
+.titles {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+.titles h1, .titles h2 {
+    font-size: 7vw;
+    margin: 0; 
+    padding: 0px 20px; 
+}
+
+
+
+.titles h2 {
+    font-size: 11vw; /* Larger size for h2 */
+    padding: 20px;
+    outline: 3px solid white;
+    border-radius: 40px;
+    width: fit-content;
+
+}
+
+.titles h2 span, .logo span {
+    color: red;
+}
+
+
+
+
+@media screen and (max-width: 920px){
+    body {
+        height: 100vh;
+        overflow-x: hidden;
+    }
+    .mobile {
+        display: none;
+    }
+    .desktop {
+        display: block;
+    }
+    .nav_list ul {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        flex-grow: 0; 
+        font-size: 2vw;
+    }
+    .nav_list li {
+        margin: 0 2vw; 
+    }
+
+    header {
+        font-size: 3vh;
+        height: auto;
+      
+        padding-bottom: 10vh; 
+        position: relative; 
+    }
+
+
+}
+
+
+  
+
+@media screen and (max-width: 770px) {
+    body {
+        height: 100vh;
+        overflow-x: hidden; /* Prevent horizontal scroll */
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    header {
+        font-size: 3vh;
+        height: auto;
+        padding-top: 15vh; /* Adjusted padding top */
+        padding-bottom: 10vh; /* Added padding bottom */
+        position: relative; /* Added position relative */
+    }
+
+    h1 {
+        display: none;
+    }
+
+    .titles {
+        position: absolute;
+        top: 25vh; /* Adjusted top position */
+        left: 5%; /* Aligned to the left */
+        transform: translate(0%, -50%); /* Center the title vertically */
+    }
+
+    .titles h2 {
+        font-size: 20vw;
+        outline: none;
+        padding: 0;
+        text-align: left; /* Align text to the left */
+    }
+
+    nav{
+        top: 70vh;
+    }
+    .nav_list {
+        position: absolute;
+        width: 100%; /* Occupy full width */
+        background-color: black; /* Ensuring visibility */
+        top: 65%; /* Adjusted top position */
+        transform: translateY(-50%); /* Center the menu vertically */
+        
+    }
+
+    .nav_list ul {
+        display: block;
+        position: relative;
+        list-style: none;
+        justify-content: center;
+        font-size: 7vw;
+        text-align: left;
+        
+    }
+
+    .nav_list li {
+        margin: 0 0px; /* Reduced margin */
+    }
+
+    .nav_list a {
+        position: relative;
+        transition: none; /* Remove transition */
+        
+        top: -4vh;
+    }
+
+    .nav_list a:hover {
+        outline: none; /* Remove outline on hover */
+        color: red;
+        transition: left 0.3s ease-in-out; /* Add transition */
+
+    }
+
+
+
+}
+
+
+
+
+
+
