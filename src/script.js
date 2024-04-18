@@ -5,32 +5,41 @@ let slideindex = 0;
 const buttonPrev = document.querySelector(".carousel-button-prev");
 const buttonNext = document.querySelector(".carousel-button-next");
 const scrollDown = document.getElementsByClassName("scrollDown")[0];
-const topsection = document.querySelector("header");
+const topsection = document.querySelector("nav")
 const carouselSection = document.getElementsByClassName("carousel-container")[0];
 
 
 
 
+window.addEventListener("scroll", toggleScrollButton);
+
+function toggleScrollButton() {
+    if (window.scrollY >= carouselSection.getBoundingClientRect().top) {
+        scrollDown.innerHTML = "Scroll <i class='fa-solid fa-caret-up'></i>";
+    } else {
+        scrollDown.innerHTML = "Scroll <i class='fa-solid fa-caret-down'></i>";
+
+    }
+}
 
 scrollDown.addEventListener("click", scrollTarget);
 
 function scrollTarget() {
     if (window.scrollY >= carouselSection.getBoundingClientRect().top) {
-        scrollDown.innerHTML = "Scroll Up";
+        scrollDown.innerHTML = "Scroll <i class='fa-solid fa-caret-down'></i>";
         autoScroll(topsection);
-    }
-    else {
-        scrollDown.innerHTML = "Scroll Down";
+    } else {
+        scrollDown.innerHTML = "Scroll <i class='fa-solid fa-caret-up'></i>";
         autoScroll(carouselSection);
     }
 }
-
 
 function autoScroll(scrollTarget) {
     scrollTarget.scrollIntoView({behavior: "smooth"});
 }
 
-// add event listeners to the buttons
+
+// carousel
 buttonPrev.addEventListener("click", function() {
 
     slideindex--;
@@ -49,6 +58,7 @@ function carousel() {
     // hide all slides initially
     for (var i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
+
     }
 
     // check if slide index is bigger than the amount of slides

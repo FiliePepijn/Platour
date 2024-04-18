@@ -131,11 +131,11 @@ header {
 
 
 /* scrollbutton */
-.scrollDown {
+.scrollDown, .scrollDown i {
     position: sticky;
     top: 10%;
     left: 50%;
-    transform: translate(-50%, 0);
+    /* transform: translate(-50%, 0); */
     font-size: 1vw;
     color: white;
     cursor: pointer;
@@ -143,11 +143,13 @@ header {
     border: none;
     text-align: inherit;
     appearance: none;
-
+    transition: all 1s ease;
     z-index: 2;
 }
 
-.scrollDown:hover, .scrolldown i:hover {
+
+.scrollDown:hover,
+.scrollDown:hover i {
     color: red;
 }
 
