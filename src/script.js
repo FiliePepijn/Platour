@@ -1,3 +1,12 @@
+// import Swiper JS
+import Swiper from 'swiper';
+import { Mousewheel,Pagination } from 'swiper/modules';
+// import Swiper styles
+import 'swiper/css';
+import 'swiper/css/bundle';
+import 'swiper/css/pagination';
+
+
 // define the slide index
 let slideindex = 0;
 
@@ -6,10 +15,7 @@ const buttonPrev = document.querySelector(".carousel-button-prev");
 const buttonNext = document.querySelector(".carousel-button-next");
 const scrollDown = document.getElementsByClassName("scrollDown")[0];
 const topsection = document.querySelector("nav")
-const carouselSection = document.getElementsByClassName("carousel-container")[0];
-
-
-
+const carouselSection = document.getElementsByClassName("swiper")[0];
 
 window.addEventListener("scroll", toggleScrollButton);
 
@@ -38,44 +44,32 @@ function autoScroll(scrollTarget) {
     scrollTarget.scrollIntoView({behavior: "smooth"});
 }
 
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'vertical',
+  loop: true,
+  followFinger: true,
 
-// carousel
-buttonPrev.addEventListener("click", function() {
+  modules: [Mousewheel,Pagination],
 
-    slideindex--;
-    carousel();
+  mousewheel: {
+    sensitivity: 1,
+    releaseOnEdges: true,
+  },
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination', 
+    type: 'progressbar',
+  },
+
+
+
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+
+  
 });
-buttonNext.addEventListener("click", function() {
-    slideindex++;
-    carousel();
-});
-
-// define the carousel function
-function carousel() {
-    // define the slides
-    var slides = document.getElementsByClassName("carousel-item");
-    
-    // hide all slides initially
-    for (var i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-
-    }
-
-    // check if slide index is bigger than the amount of slides
-    if (slideindex >= slides.length) {
-        slideindex = 0;
-    }
-
-    // make sure the slide index is not negative
-    if (slideindex < 0) {
-        slideindex = slides.length - 1;
-    }
-
-    // reveal current slide
-    slides[slideindex].style.display = "block";
-}
-
-// call the carousel function when the page loads
-carousel();
-
-
