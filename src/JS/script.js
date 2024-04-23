@@ -41,19 +41,26 @@ function scrollTarget() {
 }
 
 function autoScroll(scrollTarget) {
-    scrollTarget.scrollIntoView({behavior: "smooth"});
+    scrollTarget.scrollIntoView({
+        behavior: "smooth",
+        easing: "ease-in-out", // optional, default is "ease-in-out"
+        
+    });
 }
+
+
 
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'vertical',
   loop: true,
   followFinger: true,
+  speed: 600,
 
   modules: [Mousewheel,Pagination],
 
   mousewheel: {
-    sensitivity: 1,
+    sensitivity: 2,
     releaseOnEdges: true,
   },
 
