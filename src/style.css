@@ -129,28 +129,34 @@ header {
     color: red;
 }
 
-
-/* scrollbutton */
-.scrollDown, .scrollDown i {
+.scrollDown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: sticky;
-    top: 10%;
-    left: 50vw;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    color: #fff;
     font-size: 1.5vw;
-    color: white;
-    cursor: pointer;
-    background: none;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+  }
+  
+  .scrollDown-container button {
+    font-size: 16px;
+    padding: 10px 20px;
     border: none;
-    text-align: inherit;
-    appearance: none;
-    transition: all 1s ease;
-    z-index: 2;
-}
-
-
-.scrollDown:hover,
-.scrollDown:hover i {
-    color: red;
-}
+    border-radius: 5px;
+    background-color: #474747;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .scrollDown-container button:hover {
+    background-color: #333;
+  }
 
 
 
