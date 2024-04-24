@@ -9,9 +9,7 @@ import GUI from 'lil-gui';
 /**
  * gui
  */
-const gui = new GUI();
-gui.add({ message: 'Hello World' }, 'message');
-
+//const gui = new GUI();
 
 const canvas = document.querySelector('canvas.webgl');
 const scene = new THREE.Scene();
@@ -19,32 +17,40 @@ const scene = new THREE.Scene();
 
 
 
-const sizes = {
-    width: 350,
-    height: 450
-}
-
 const renderer = new THREE.WebGLRenderer({
-    canvas: canvas
+    canvas: canvas,
 }); 
 
 
+var sizes = {
+    width: window.innerWidth / 4,
+    height: window.innerHeight / 1
+}
 renderer.setSize(sizes.width, sizes.height);
 
+
+
+
+window.addEventListener("resize", () => {
+    sizes.width = window.innerWidth / 3;
+    sizes.height = window.innerHeight / 1;
+    renderer.setSize(sizes.width, sizes.height);
+    camera.aspect = sizes.width / sizes.height;
+    camera.updateProjectionMatrix();
+});
 
 // Initialize camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width/sizes.height, 0.1, 1000);
 scene.add(camera);
-camera.position.set(0,0,2);
+camera.position.set(0,0,9);
 
-gui.add(camera.position, 'x').min(-10).max(10).step(0.01);
 
 
 // Add controls
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.enablePan = false;
-controls.enableZoom = true;
+controls.enableZoom = false;
 controls.enableRotate = true;
 controls.maxAzimuthAngle = Math.PI / 4;
 controls.minAzimuthAngle = -Math.PI / 4;
@@ -52,28 +58,28 @@ controls.minPolarAngle = Math.PI/2;
 controls.maxPolarAngle = Math.PI/2;
 
 
-gui.add(controls, 'maxAzimuthAngle').min(-Math.PI).max(Math.PI).step(0.01).name('Max Azimuth Angle')
-gui.add(controls, 'minAzimuthAngle').min(-Math.PI).max(Math.PI).step(0.01).name('Min Azimuth Angle')
-
-
 function autoRotate() {
+    var rotationspeed = 2;
+
     controls.autoRotate = true;
-    controls.autoRotateSpeed = 5; // Set initial auto rotation speed
+    controls.autoRotateSpeed = rotationspeed; 
 
     // Check camera rotation continuously
     const update = () => {
-        requestAnimationFrame(update);
+        requestAnimationFrame(update); 
 
         // Get current azimuth angle
         const currentAzimuthAngle = controls.getAzimuthalAngle();
-
+        
         // Check if camera rotation is within the specified limits
         if (currentAzimuthAngle >= controls.maxAzimuthAngle) {
             console.log('Reached max azimuth angle');
-            controls.autoRotateSpeed = 5; // Reverse auto rotation
+            controls.autoRotateSpeed = rotationspeed;
+             
         } else if (currentAzimuthAngle <= controls.minAzimuthAngle) {
             console.log('Reached min azimuth angle');
-            controls.autoRotateSpeed = -5; // Continue with positive auto rotation
+            controls.autoRotateSpeed = -rotationspeed;
+            
         }
     };
 
@@ -104,17 +110,21 @@ loader.load(
         points.vertexColors = true;
         // set vertex points red
         points.material.color = red;
-        points.scale.set(3.5, 3.5, 3.5);
+        
         // Add point cloud to scene
         scene.add(points);
         
-
+        
         
         // Render loop
         const tick = () => {
             // Update controls
             controls.update();
             // Render
+            const scaleRender = canvas.clientHeight/canvas.clientWidth+1*9;
+            console.log(scaleRender)
+            points.scale.set(scaleRender,scaleRender,scaleRender);
+            
             renderer.render(scene, camera);
 
             // Call tick again on the next frame
