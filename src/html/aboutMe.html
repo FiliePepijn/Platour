@@ -3,23 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About P.Latour</title>
-    <!-- Include Three.js library -->
-    
+    <title>P.Latour</title>
 
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-            background-color: white;
-        }
-    </style>
+    <!-- links -->
+    <link rel="stylesheet" href="../CSS/aboutMe.css">
+    <link rel="manifest" href="manifest.webmanifest">
+
+    <!-- Font -->
+    <link rel="stylesheet" href="https://use.typekit.net/gyq5jpu.css">  
+    <script src="https://kit.fontawesome.com/1704120139.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
+<!-- Desktop layout -->
+<div class="desktop">
 
+    <!-- navigation + title -->
+    <header>
+        <nav>
+            <div class="logo">
+            <a href="../index.html">P<span>.</span>Latour</a>
+            </div>
+            <div class="nav_list">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#Work">My Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a class="active-page" href="./aboutMe.html">About Me</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <h1>About<span>.</span>me</h1>
+    </header>
+
+    <!-- information -->
+    <section class="aboutMe">
+        <p>
+            i am Pepijn Latour, a 19 year old student from the Netherlands, i study ICT-Media Design at the Fontys University of Applied Sciences in Eindhoven.
+        </p>
+    </section>
+
+
+
+
+
+    <!-- three.js -->
     <canvas class="webgl"></canvas>
 
-    
-</body>
+
+
+
+
     <script type="module" src="../JS/Aboutme.js"></script>
+</body>
 </html>
