@@ -15,7 +15,11 @@ export default {
     assetsInclude: ['**/*.pcd'],
     plugins: [
         qrcode(), 
-        Sitemap(),
+        Sitemap(
+            {
+                hostname: 'https://platour.net',
+            }
+        ),
     ],
     build:
     {
