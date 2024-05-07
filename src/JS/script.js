@@ -40,12 +40,13 @@ function scrollTarget() {
     }
 }
 
-function autoScroll(scrollTarget) {
-    scrollTarget.scrollIntoView({
-        behavior: "smooth",
-        easing: "ease-in-out", // optional, default is "ease-in-out"
-        
-    });
+function autoScroll(scrollTarget, offset = 0) {
+  scrollTarget.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "nearest", 
+      easing: "ease-in-out"
+  });
 }
 
 

@@ -9,18 +9,17 @@ export default {
     base: './',
     server:
     {
-        host: true, // Open to local network and display URL
-        open: !('SANDBOX_URL' in process.env || 'CODESANDBOX_HOST' in process.env) // Open if it's not a CodeSandbox
+        host: true, 
     },
     assetsInclude: ['**/*.pcd'],
     plugins: [
-        qrcode(), // only applies in dev mode
+        qrcode(), 
     ],
     build:
     {
-        outDir: '../dist', // Output in the dist/ folder
-        emptyOutDir: true, // Empty the folder first
-        sourcemap: true, // Add sourcemap
+        outDir: '../dist', 
+        emptyOutDir: true,
+        sourcemap: true,
         chunkSizeWarningLimit: 100000000,
         rollupOptions: {
             input: {
