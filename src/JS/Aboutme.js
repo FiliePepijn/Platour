@@ -2,9 +2,8 @@ import * as THREE from 'three';
 import { PCDLoader } from 'three/examples/jsm/loaders/PCDLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'; // Import OrbitControls
 import { TrackballControls } from 'three/addons/controls/TrackballControls.js';
-
 import GUI from 'lil-gui';
-
+import pcd from '../pcd/PepijnPCD.pcd';
 
 /**
  * gui
@@ -98,7 +97,7 @@ const loader = new PCDLoader();
 // Load a resource
 loader.load(
     // load pcd file
-    '../pcd/PepijnPCD.pcd',
+    pcd,
     // load callback
     function (points) {
 
