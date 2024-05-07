@@ -25,7 +25,7 @@ export default {
         rollupOptions: {
             input: {
                 main: './src/index.html',
-                aboutme: './src/html/aboutMe.html',
+                aboutme: './src/html/aboutme.html',
             }
         }
     },
