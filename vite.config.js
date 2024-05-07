@@ -1,4 +1,5 @@
 import { qrcode } from 'vite-plugin-qrcode';
+import Sitemap from 'vite-plugin-sitemap'
 import DynamicPublicDirectory from "vite-multiple-assets";
 
 
@@ -14,6 +15,7 @@ export default {
     assetsInclude: ['**/*.pcd'],
     plugins: [
         qrcode(), 
+        Sitemap(),
     ],
     build:
     {

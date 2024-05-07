@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "vite-multiple-assets": "^1.2.10",
-    "vite-plugin-qrcode": "^0.2.3"
+    "vite-plugin-qrcode": "^0.2.3",
+    "vite-plugin-sitemap": "^0.5.3"
   }
 }
