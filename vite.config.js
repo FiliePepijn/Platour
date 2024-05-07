@@ -26,6 +26,8 @@ export default {
             input: {
                 main: './src/index.html',
                 aboutme: './src/html/aboutme.html',
+                projects: './src/html/projects.html',
+                contact: './src/html/contact.html',
             }
         }
     },
