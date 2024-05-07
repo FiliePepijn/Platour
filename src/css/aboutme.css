@@ -8,18 +8,14 @@ body * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none; 
+    text-decoration: none;    
     color: white;
 }
-
-
 
 body {
     font-family: 'Coolvetica', sans-serif;
     height: 100%;
-    background-color: black;
-    color: white;
-    
+    background-color: black;    
 }
 
 /* Navigation bar */
@@ -41,122 +37,83 @@ nav {
     flex-grow: 1;
 }
 
-/* Navigation list items */
 .nav_list ul {
     display: flex;
     list-style: none;
-    justify-content: center;
-    flex-grow: 1; 
     font-size: 2vw;
 }
 
-/* Navigation list items */
-.nav_list li {
-        margin: 0 1.5vw; 
-    
-}
-
-/* Navigation list links */
 .nav_list a {
     padding: 10px 20px 10px 20px; 
+    margin: 0 1.5vw; 
     border-radius: 15px;
     transition: outline 0.3s ease-in-out;
-    
 }
 
-/* Navigation active page */
 .active-page{
     color: red;
 }
 
-/* Navigation item hover */
 .nav_list a:hover {
     outline: 3px solid white;
 }
-
 
 /* Logo upper left */
 .logo {
     font-size: 3vw;  
 }
 
-
-
 /* Header */
 header {
     justify-content: center; 
 }
 
-header h1 {
-    font-size: 6vw; 
-    padding-left: 1vw;
-    border-radius: 40px;
+.text h1 {
+    font-size: 3rem; 
     margin: 0; 
-    padding-top: 13vh;
 }
 
 
-section {
-    justify-content: center;
-    width: 60vw;
-}
-
-section p {
-    font-size: 1.2vw;
-    margin: 0;
-    padding-left: 1vw;
-    text-overflow: ellipsis;
-    
-}
-/*red dot h1*/
-header h1 span, .logo span {
+.text h1 span, .logo span {
     color: red;
 }
 
+
 canvas {
-    position: absolute;
-    top: 20vh;
+    position: relative;
+    height: auto;
     right: 5vw;
     z-index: -1;
 }
 
 
-/* smaller Desktop view (tablet) */
-@media screen and (max-width: 920px){
-    body {
-        height: 100vh;
-        overflow-x: hidden;
-    }
-    .mobile {
-        display: none;
-    }
-    .desktop {
-        display: block;
-    }
-    .nav_list ul {
-        display: flex;
-        list-style: none;
-        justify-content: center;
-        flex-grow: 0; 
-        font-size: 2vw;
-    }
-    .nav_list li {
-        margin: 0 2vw; 
-    }
-
-    header {
-        font-size: 3vh;
-        height: auto;
-      
-        padding-bottom: 10vh; 
-        position: relative; 
-    }
-
-
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    
 }
 
+.text {
+    margin-left: 5vw;
+    margin-top: 10vh;
+    font-size: 1.5rem;
+    
+}
+.text p{
+    margin-top: 2vh;
+}
 
-  
+.canvas-container {
+    display: flex;
+    justify-content: center;
+}
+
+.webgl {
+    max-width: 100%;
+    height: auto;
+}
+
 
 /* Mobile view */
 @media screen and (max-width: 770px) {

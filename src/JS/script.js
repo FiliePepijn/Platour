@@ -71,6 +71,8 @@ const swiper = new Swiper('.swiper', {
     type: 'progressbar',
   },
 
+  preventClicks: false,
+  preventClicksPropagation: false,
 
 
 
