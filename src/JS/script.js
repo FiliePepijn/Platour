@@ -71,10 +71,9 @@ const swiper = new Swiper('.swiper', {
     type: 'progressbar',
   },
 
-  preventClicks: false,
-  preventClicksPropagation: false,
-
-
+  preventInteractionOnTransition:false,
+  preventClicks:false,
+  preventClicksPropagation:false,
 
   // And if we need scrollbar
   scrollbar: {

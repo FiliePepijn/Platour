@@ -210,7 +210,7 @@ body {
         z-index: 2;
     }
 
-    .swiper-slide button {
+    .swiper-slide .button {
         font-family: coolvetica;
         position: relative;
         top: 25%;
