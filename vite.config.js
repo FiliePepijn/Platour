@@ -33,6 +33,9 @@ export default {
                 aboutme: './src/html/aboutme.html',
                 projects: './src/html/projects.html',
                 contact: './src/html/contact.html',
+                mediaproducts: './src/html/mediaproducts.html',
+                designproducts: './src/html/design.html',
+                standard: './src/html/standard.html',
             }
         }
     },
