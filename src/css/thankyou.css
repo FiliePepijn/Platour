@@ -1,0 +1,119 @@
+/* Reset default styles */
+body,
+body * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+}
+
+.mobile {
+    display: none;
+}
+
+/* General styles */
+body {
+    font-family: 'Coolvetica', sans-serif;
+    height: 100%;
+    background-color: black;
+    color: white;
+}
+
+/* Navigation bar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 2vh 1vw;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navigation list */
+.nav_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Navigation list items */
+.nav_list ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-grow: 1;
+    font-size: 2vw;
+}
+
+/* Navigation list items */
+.nav_list li {
+    margin: 0 1.5vw;
+}
+
+/* Navigation list links */
+.nav_list a {
+    padding: 10px 20px 10px 20px;
+    border-radius: 15px;
+    transition: outline 0.3s ease-in-out;
+}
+
+/* Navigation active page */
+.active-page {
+    color: red;
+}
+
+/* Navigation item hover */
+.nav_list a:hover {
+    outline: 3px solid white;
+}
+
+/* Logo upper left */
+.logo {
+    font-size: 3vw;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: left;
+    height: 80vh; /* Set header height to 100% */
+    justify-content: center; /* Vertically center content */
+}
+
+/* Title */
+.titles {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; /* Vertically center content */
+    height: 100%;
+}
+
+.titles h1 {
+    font-size: 7vw;
+    margin: 0;
+    padding: 0px 20px;
+}
+
+/* Make dots red */
+.titles h1 span {
+    color: red;
+}
+
+/* Mobile view */
+@media screen and (max-width: 767px) {
+
+.desktop {
+    display: none;
+}
+
+.mobile {
+    display: block;
+}
+}
