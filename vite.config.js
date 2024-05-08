@@ -11,6 +11,7 @@ export default {
     server:
     {
         host: true, 
+        
     },
     assetsInclude: ['**/*.pcd'],
     plugins: [
@@ -36,6 +37,8 @@ export default {
                 mediaproducts: './src/html/mediaproducts.html',
                 designproducts: './src/html/design.html',
                 standard: './src/html/standard.html',
+                personal: './src/html/personal.html',
+                development: './src/html/development.html',
             }
         }
     },
