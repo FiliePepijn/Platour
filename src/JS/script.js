@@ -1,6 +1,7 @@
 // import Swiper JS
 import Swiper from 'swiper';
 import { Mousewheel,Pagination } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 // import Swiper styles
 import 'swiper/css';
 import 'swiper/css/bundle';
@@ -8,11 +9,9 @@ import 'swiper/css/pagination';
 
 
 // define the slide index
-let slideindex = 0;
+var menu = ['AM', 'LO1', 'LO2', 'LO3','LO4','LO5']
 
 // define prev and next buttons
-const buttonPrev = document.querySelector(".carousel-button-prev");
-const buttonNext = document.querySelector(".carousel-button-next");
 const scrollDown = document.getElementsByClassName("scrollDown")[0];
 const topsection = document.querySelector("nav")
 const carouselSection = document.getElementsByClassName("swiper")[0];
@@ -52,33 +51,34 @@ function autoScroll(scrollTarget, offset = 0) {
 
 
 const swiper = new Swiper('.swiper', {
-  // Optional parameters
+  modules: [Mousewheel,Pagination,Autoplay],
   direction: 'vertical',
   loop: true,
-  followFinger: true,
-  speed: 600,
+  centeredSlides: true,
+  speed: 800,
 
-  modules: [Mousewheel,Pagination],
+  
 
-  mousewheel: {
-    sensitivity: 2,
-    releaseOnEdges: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: true,
   },
 
   // If we need pagination
-  pagination: {
+   pagination: {
     el: '.swiper-pagination', 
-    type: 'progressbar',
-  },
+    clickable: true,
+    renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (menu[index]) + '</span>';
+    },
+    },
+    mousewheel: {
+      sensitivity: 2,
+      releaseOnEdges: true,
+    },
+  
 
-  preventInteractionOnTransition:false,
-  preventClicks:false,
-  preventClicksPropagation:false,
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
 
   
 });

@@ -121,7 +121,7 @@ loader.load(
             controls.update();
             // Render
             const scaleRender = canvas.clientHeight/canvas.clientWidth+1*9;
-            console.log(scaleRender)
+            // console.log(scaleRender)
             points.scale.set(scaleRender,scaleRender,scaleRender);
             
             renderer.render(scene, camera);
