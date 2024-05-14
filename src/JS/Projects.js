@@ -2,61 +2,117 @@
 import Swiper from 'swiper';
 import { Mousewheel,Pagination } from 'swiper/modules';
 import { EffectCoverflow } from 'swiper/modules';
+import { EffectFlip } from 'swiper/modules';
 import {Autoplay} from 'swiper/modules';
 // import Swiper styles
 import 'swiper/css';
 import 'swiper/css/bundle';
 import 'swiper/css/pagination';
-import { effectInit } from 'swiper/effect-utils';
-import { modelScale } from 'three/examples/jsm/nodes/Nodes.js';
+
+
 
 
 // define the slide index
 var menu = ['AM', 'LO1', 'LO2', 'LO3','LO4','LO5']
 
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+    // true for mobile device
+    const swiper = new Swiper('.swiper', {
+        modules: [Mousewheel,Pagination,EffectCoverflow,Autoplay,EffectFlip],
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        speed: 800,
+        // direction: 'vertical',
+
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: true,
+        },
+
+        loop: true,
+
+        effect : 'coverflow',
+        coverflowEffect: {
+            stretch: 0,
+            depth: 850,
+            modifier: 1,
+            slideShadows: true,
+            scale: 0.3,
+        },
+
+        mousewheel: {
+        sensitivity: 2,
+        releaseOnEdges: true,
+        },
+
+        // // If we need pagination
+        // pagination: {
+        // el: '.swiper-pagination', 
+        // clickable: true,
+        // renderBullet: function (index, className) {
+        //     return '<span class="' + className + '">' + (menu[index]) + '</span>';
+        // },
+        // },
 
 
-const swiper = new Swiper('.swiper', {
-    modules: [Mousewheel,Pagination,EffectCoverflow,Autoplay],
-    centeredSlides: true,
-    slidesPerView: 'auto',
-    speed: 800,
+        // And if we need scrollbar
+        scrollbar: {
+        el: '.swiper-scrollbar',
+        },
+    });
 
-    autoplay: {
-        delay: 2000,
-        disableOnInteraction: true,
-    },
-
-    loop: true,
+    document.addEventListener("DOMContentLoaded", function() {
+        const menuButton = document.querySelector(".Menu-Dropdown");
+        const navList = document.querySelector(".nav_list ul");
     
-    effect : 'coverflow',
-    coverflowEffect: {
-        stretch: 0,
-        depth: 850,
-        modifier: 1,
-        slideShadows: true,
-        scale: 0.3,
-    },
+        menuButton.addEventListener("click", function() {
+            navList.classList.toggle("active");
+        });
+    });
+  }else{
+    // false for not mobile device
+    const swiper = new Swiper('.swiper', {
+        modules: [Mousewheel,Pagination,EffectCoverflow,Autoplay],
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        speed: 800,
 
-    mousewheel: {
-    sensitivity: 2,
-    releaseOnEdges: true,
-    },
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: true,
+        },
 
-    // If we need pagination
-    pagination: {
-    el: '.swiper-pagination', 
-    clickable: true,
-    renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + (menu[index]) + '</span>';
-    },
-    },
+        loop: true,
+        
+        effect : 'coverflow',
+        coverflowEffect: {
+            stretch: 0,
+            depth: 850,
+            modifier: 1,
+            slideShadows: true,
+            scale: 0.3,
+        },
+
+        mousewheel: {
+        sensitivity: 2,
+        releaseOnEdges: true,
+        },
+
+        // If we need pagination
+        pagination: {
+        el: '.swiper-pagination', 
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (menu[index]) + '</span>';
+        },
+        },
 
 
-    // And if we need scrollbar
-    scrollbar: {
-    el: '.swiper-scrollbar',
-    },
+        // And if we need scrollbar
+        scrollbar: {
+        el: '.swiper-scrollbar',
+        },
 
-  
-});
+    
+    });
+}
