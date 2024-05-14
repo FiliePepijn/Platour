@@ -178,7 +178,6 @@ body {
         position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
     }
     
@@ -218,6 +217,7 @@ body {
         transition: background-color 0.3s ease;
         z-index: 2;
         top: 35%;
+        width: 7rem;
   
     }
     
