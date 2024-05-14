@@ -102,12 +102,27 @@ img {
     
 }
 
-canvas {
+
+
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.webgl {
+    width: 500px;
+    height: 700px;
+    
+}
+
+
+/* canvas {
     position: relative;
-    height: auto;
     right: 5vw;
     z-index: -1;
-}
+} */
 
 
 
@@ -143,16 +158,6 @@ span, .logo span {
     color: red;
 }
 
-.canvas-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.webgl {
-    max-width: 100%;
-    height: auto;
-}
 
 footer {
     
@@ -185,12 +190,22 @@ footer {
         overflow-x: hidden; 
     }
 
-    .desktop {
-        display: none;
+    .content {
+        display: block;
+        margin: 0 auto;
+        width: 90%;
     }
 
-    .mobile {
+    .canvas-container {
         display: block;
+        margin: 0 auto;
+        width: 90%;
+        
+    }
+
+    .webgl{
+        width: 100px;
+        height: 100px;
     }
 
     header {
