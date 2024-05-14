@@ -9,6 +9,10 @@ import 'swiper/css';
 import 'swiper/css/bundle';
 import 'swiper/css/pagination';
 
+const menuButton = document.querySelector(".Menu-Dropdown");
+const overlay = document.querySelector(".overlay");
+const closeButton = document.querySelector(".close-button");
+
 
 
 
@@ -45,14 +49,6 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
         releaseOnEdges: true,
         },
 
-        // // If we need pagination
-        // pagination: {
-        // el: '.swiper-pagination', 
-        // clickable: true,
-        // renderBullet: function (index, className) {
-        //     return '<span class="' + className + '">' + (menu[index]) + '</span>';
-        // },
-        // },
 
 
         // And if we need scrollbar
@@ -62,14 +58,16 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
     });
 
     document.addEventListener("DOMContentLoaded", function() {
-        const menuButton = document.querySelector(".Menu-Dropdown");
-        const navList = document.querySelector(".nav_list ul");
-    
         menuButton.addEventListener("click", function() {
-            navList.classList.toggle("active");
+        overlay.classList.toggle("active");
+        });
+
+        closeButton.addEventListener("click", function() {
+            overlay.classList.remove("active");
         });
     });
-  }else{
+}
+  else{
     // false for not mobile device
     const swiper = new Swiper('.swiper', {
         modules: [Mousewheel,Pagination,EffectCoverflow,Autoplay],
