@@ -10,7 +10,9 @@
     <base href="/">
     <link rel="stylesheet" href="https://use.typekit.net/gyq5jpu.css">  
     <script src="https://kit.fontawesome.com/1704120139.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/projects.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <script type="module" src="../JS/Projects.js" defer></script>
+    <script type="module" src="../JS/Pointcloud.js" defer></script>
 
     <!-- Font -->
 
@@ -21,23 +23,19 @@
 
     <!-- navigation + title -->
     <header>
-        <h1 href="#">P<span>.</span>Latour</h1>
+        <div class="logo">
+            <a href="../index.html">P<span>.</span>Latour</a>
+        </div>
         <nav>
-            <div class="overlay">
-                <button class="close-button"><i class="fas fa-times"></i></button>
-                <div class="nav_list">
-                    <ul>
-                        <li><a href="#Home">Home</a></li>
-                        <li><a class="active-page" href="html/projects.html">Projects</a></li>
-                        <li><a href="html/aboutme.html">About Me</a></li>
-                        <li><a href="html/contact.html">Contact</a></li>
-                    </ul>
-                </div>
+            <div class="nav_list">
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a class="active-page" href="html/projects.html">Projects</a></li>
+                    <li><a href="html/aboutme.html">About Me</a></li>
+                    <li><a href="html/contact.html">Contact</a></li>
+                </ul>
             </div>
-        </nav>    
-        <div class="button-container">
-            <button class="Menu-Dropdown">Menu<span>.</span> <i class="fa-solid fa-caret-down"></i></button>
-        </div>   
+        </nav>        
     </header>
 
     
@@ -118,7 +116,6 @@
     </div>
 </footer>
 
-        <script type="module" src="../JS/Projects.js"></script>
-        <script type="module" src="../JS/Pointcloud.js"></script>
+        
 </body>
 </html>

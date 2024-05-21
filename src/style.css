@@ -4,291 +4,264 @@ body {
     background-color: black;
     color: white;
 }
-@media screen and (min-width: 1023px){
-    .desktop {
-        display: block;
-    }
-    .mobile {
-        display: none;
-    }
-
-
-
-    /* reset body to defualt */
-    body * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        text-decoration: none; 
-        color: white;
-    }
-
-
-
-
-
-    /* Navigation bar */
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: black;
-        padding: 2vh 1vw; 
-        top: 0;
-        z-index: 1000;
-    }
-
-    /* Navigation list */
-    .nav_list {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-grow: 1;
-    }
-
-    /* Navigation list items */
-    .nav_list ul {
-        display: flex;
-        list-style: none;
-        justify-content: center;
-        flex-grow: 1; 
-        font-size: 2vw;
-    }
-
-    /* Navigation list items */
-    .nav_list ul li {
-            margin: 0.1rem;
-        
-    }
-
-    /* Navigation list links */
-    .nav_list a {
-        padding: 10px 20px 10px 20px; 
-        border-radius: 15px;
-        transition: outline 0.3s ease-in-out;
-        
-    }
-
-    /* Navigation active page */
-    .active-page{
-        color: red;
-    }
-
-    /* Navigation item hover */
-    .nav_list a:hover {
-        outline: 3px solid white;
-    }
-
-
-    /* Logo upper left */
-    .logo {
-        font-size: 3vw;  
-    }
-
-
-
-    /* Header */
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-        align-content: center;
-        text-align: left;
-        height: 90vh; /* Set header height to 100% */
-        justify-content: center; /* Vertically center content */
-    }
-
-    /* Title */
-    .titles {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center; /* Vertically center content */
-        height: 100%;
-    }
-
-    .titles h1 {
-        font-size: 7vw;
-        margin: 0; 
-        padding: 0px 20px; 
-    }
-
-
-    /*extra styling for h2*/
-    .titles h2 {
-        font-size: 11vw; 
-        font-size: 11vw; 
-        padding: 0px 10px 10px 10px;
-        outline: 3px solid white;
-        border-radius: 20px;
-        width: fit-content;
-        margin: 0; 
-        margin: 10px; 
-    }
-
-    /*red dot h2*/
-    .titles h2 span, .logo span {
-        color: red;
-    }
-
-    .scrollDown-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: sticky;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 150px;
-        color: #fff;;
-        border-radius: 0 0 5px 5px;
-    }
-    
-    .scrollDown-container button {
-        font-size: 1vw;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        background-color: #474747;
-        color: #fff;
-        cursor: pointer;
-    }
-    
-    .scrollDown-container button:hover {
-        background-color: #333;
-    }
-
-
-
-    /* carousel */
-    .swiper {
-        margin-top: 0rem;
-        width: 90rem;
-        height: 40rem;
-        position: relative;
-        outline: white 0.3rem solid;
-        border-radius: 2.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .swiper-slide {
-        width: 100%;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-    }
-    
-    .swiper-slide h1,
-    .swiper-slide p,
-    .swiper-slide .button {
-        position: absolute;
-        text-align: left;
-        left: 5%;
-    
-    }
-    
-    .swiper-slide h1 {
-        position: relative;
-        font-size: 3rem;
-        color: white;
-        z-index: 2;
-        top: 30%;
-    }
-    
-    .swiper-slide p {
-        position: relative;
-        width: 40rem;
-        font-size: 1.1rem;
-        color: white;
-        z-index: 2;
-        top: 30%;
-    }
-    
-    .swiper-slide .button {
-        position: relative;
-        background-color: red;
-        color: #fff;
-        padding: 10px 20px;
-        border-radius: 20px;
-        text-decoration: none;
-        transition: background-color 0.3s ease;
-        z-index: 2;
-        top: 35%;
-        width: 7rem;
-  
-    }
-    
-    .swiper-slide img {
-        width: 40%;
-        height: 60%;
-        position: absolute;
-        right: 5%;
-        top: 50%;
-        transform: translate(0, -50%);
-        object-fit: cover;
-    }
-    
-    .swiper-slide canvas {
-        position: absolute;
-        right: 5%;
-        top: 0rem;
-    }
-    
-    canvas {
-        width: 500px !important;
-        height: 600px !important;
-        
-    }
-    
-    
-    
-    .swiper-pagination-bullet {
-        padding: 15px 20px 15px 20px;
-        border-radius: 20px !important;
-        width: auto !important;
-        height: auto !important;
-        /* text-align: center ; */
-        /* line-height: 30px; */
-        font-size: 1rem;
-        color:white;
-        opacity: 1 !important;
-    
-        background: rgba(0,0,0,0.2);
-    }
-    
-    
-    
-    .swiper-pagination-bullet-active {
-        color:#fff;
-        background: red !important;
-    }
-
-    footer {
-        height: 100%;
-        width: 100%;
-        margin-top: 2rem;
-        text-align: center;
-    }
-    
-        
-    
-    .footer button{
-        font-size: 1vw;
-        padding: 5px 10px;
-        border: none;
-        border-radius: 5px;
-        background-color: #474747;
-        color: #fff;
-        cursor: pointer;
-    }
-
-    .footer-socials {
-        font-size: 2vw;
-    }
+.desktop {
+    display: block;
 }
+.mobile {
+    display: none;
+}
+
+
+
+/* reset body to defualt */
+body * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none; 
+    color: white;
+}
+
+
+
+
+
+    
+/* Navigation bar */
+nav {
+    position: absolute;
+    left: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding: 2vh 1vw; 
+    top: 0;
+    z-index: 1000;
+}
+
+
+
+/* Navigation list */
+.nav_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.nav_list ul {
+    display: flex;
+    list-style: none;
+}
+
+
+.nav_list a {
+    padding: 0.5rem 1.5rem;
+    border-radius: 15px;
+    transition: outline 0.3s ease-in-out;
+    font-size: 2.5rem;
+    width: 100%;
+}
+
+.active-page {
+    color: red;
+}
+
+.nav_list a:hover {
+    outline: 0.3rem solid white;
+}
+
+/* Logo upper left */
+.logo {
+    font-size: 4rem;  
+    text-align: left;
+}
+
+header h1{
+    position: absolute;
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-left: 1rem; 
+}
+
+/* Title */
+.titles {
+    margin-top: 22vh;
+    margin-bottom: 22vh;
+    display: grid;
+    align-items: center;
+    justify-content: center; /* Vertically center content */
+    
+}
+
+.titles h1 {
+    font-size: 7vw;
+    margin: 0; 
+    padding: 0px 20px; 
+}
+
+
+
+/*extra styling for h2*/
+.titles h2 {
+    font-size: 11vw; 
+    font-size: 11vw; 
+    padding: 0px 10px 10px 10px;
+    outline: 3px solid white;
+    border-radius: 20px;
+    width: fit-content;
+    margin: 0; 
+    margin: 10px; 
+}
+
+/*red dot h2*/
+.titles h2 span, .logo span {
+    color: red;
+}
+
+.scrollDown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    color: #fff;;
+    border-radius: 0 0 5px 5px;
+}
+
+.scrollDown-container button {
+    font-size: 1vw;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #474747;
+    color: #fff;
+    cursor: pointer;
+}
+
+.scrollDown-container button:hover {
+    background-color: #333;
+}
+
+
+
+/* carousel */
+.swiper {
+    margin-top: 0vh;
+    width: 80%;
+    height: 70vh;
+    position: relative;
+    outline: white 0.3rem solid;
+    border-radius: 2.5rem;
+}
+
+.swiper-slide {
+    align-content: center;
+}
+
+
+.swiper-slide h1,
+.swiper-slide p,
+.swiper-slide .button {
+    display: flex;
+    text-align: left;
+    left: 5%;
+    width: 40%;
+    position: relative;
+    color: #fff;
+}
+
+.swiper-slide h1 {
+    font-size: 4em;   
+    
+}
+
+.swiper-slide p {
+    font-size: 2em;
+}
+
+.swiper-slide .button {
+    font-size: 1.5em;
+    background-color: red;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: 9.2rem;
+    margin-top: 10px;
+}
+
+.swiper-slide img {
+    width: 40%;
+    height: auto;
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translate(0, -50%);
+    object-fit: cover;
+}
+
+.swiper-slide canvas {
+    position: absolute;
+    right: 2%;
+    top: 18%
+}
+
+canvas {
+    width: 50% !important;
+    height: 90% !important;
+    
+}
+
+
+
+.swiper-pagination-bullet {
+    padding: 15px 20px 15px 20px;
+    border-radius: 20px !important;
+    width: auto !important;
+    height: auto !important;
+    font-size: 1rem;
+    color:white;
+    opacity: 1 !important;
+
+    background: rgba(0,0,0,0.2);
+}
+
+
+
+.swiper-pagination-bullet-active {
+    color:#fff;
+    background: red !important;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    margin-top: 10vh;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer button {
+    font-size: 2em;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #474747;
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer-socials {
+    font-size: 4em;
+}
+
 
 
 /* smaller Desktop view (tablet) */

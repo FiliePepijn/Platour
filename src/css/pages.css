@@ -1,0 +1,576 @@
+/* by default mobile html should not be displayed */
+.mobile {
+    display: none;
+}
+
+/* reset body to default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;    
+    color: white;
+}
+
+body {
+    font-family: 'Coolvetica', sans-serif;
+    background-color: black;    
+    
+}
+
+.close-button {
+    display: none;
+}
+
+.button-container {
+    display: none;
+}
+
+.menu-title {
+    display: none;
+}
+
+/* Navigation bar */
+nav {
+    position: absolute;
+    left: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding: 2vh 1vw; 
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    position: absolute;
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-left: 1rem; 
+}
+
+/* Navigation list */
+.nav_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.nav_list ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav_list a {
+    padding: 0.5rem 1.5rem;
+    border-radius: 15px;
+    transition: outline 0.3s ease-in-out;
+    font-size: 2.5rem;
+    width: 100%;
+}
+
+.active-page {
+    color: red;
+}
+
+.nav_list a:hover {
+    outline: 0.3rem solid white;
+}
+
+/* Logo upper left */
+.logo {
+    margin: 1vw;
+    font-size: 4rem;  
+    text-align: left;
+}
+
+span, .logo span {
+    color: red;
+}
+
+/* carousel */
+.swiper {
+    margin-top: 5vh;
+    width: 80%;
+    height: 70vh;
+    position: relative;
+    outline: white 0.3rem solid;
+    border-radius: 2.5rem;
+}
+
+.swiper-slide {
+    align-content: center;
+}
+
+
+.swiper-slide h1,
+.swiper-slide p,
+.swiper-slide .button {
+    display: flex;
+    text-align: left;
+    left: 5%;
+    width: 40%;
+    position: relative;
+    color: #fff;
+}
+
+.swiper-slide h1 {
+    font-size: 4em;   
+    
+}
+
+.swiper-slide p {
+    font-size: 2em;
+}
+
+.swiper-slide .button {
+    font-size: 1.5em;
+    background-color: red;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: 9.2rem;
+    margin-top: 10px;
+}
+
+.swiper-slide img {
+    width: 40%;
+    height: auto;
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translate(0, -50%);
+    object-fit: cover;
+}
+
+.swiper-slide canvas {
+    position: absolute;
+    right: 2%;
+    top: 15%;
+    width: 40% !important;
+}
+
+
+.swiper-pagination-bullet {
+    padding: 15px 20px 15px 20px;
+    border-radius: 20px !important;
+    width: 100px !important;
+    height: auto !important;
+    font-size: 2em;
+    color:white;
+    opacity: 1 !important;
+    background: rgba(0,0,0,0.2);
+}
+
+
+
+.swiper-pagination-bullet-active {
+    color:#fff;
+    background: red !important;
+}
+
+/* Content */
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.section:nth-child(even) .text {
+    order: 2;
+}
+.section:nth-child(even) .image-container {
+    order: 1;
+}
+.text, .image-container,.canvas-container {
+    flex: 1;
+    padding: 20px;
+    align-self: center;
+}
+.page-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.page-title span {
+    color: #ff0000; /* Red accent color */
+}
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.canvas-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.canvas-container canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+
+.link {
+    color: red;
+}
+.link:hover {
+    text-decoration: underline;
+}
+
+.text p {
+    margin-top: 1vh;
+    width: 50%;
+}
+
+.text h1 {
+    font-size: 2em; 
+    margin: 0; 
+    
+}
+
+.form-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    margin-top: 20vh;
+    flex-direction: column;
+}
+
+form {
+    width: 40rem;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: black;
+    color: black;
+    justify-self: center;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    height: 5rem;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 2em;
+    font-family: 'Coolvetica';
+    color: red;
+}
+
+textarea {
+    width: 100%;
+    height: 10rem;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    font-size: 2em;
+    font-family: 'Coolvetica';
+    color: red;
+}
+
+
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 2vh;
+    border-radius: 7px;
+    font-size: 2em;
+    font-family: 'Coolvetica';
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button span {
+    color: white;
+}
+
+.pageclip-form__success {
+    font-size: 4rem;
+    font-weight: 900;
+    background-color: black;
+}
+
+.pageclip-form__success__message {
+    color: red;
+    font-size: 2em !important;
+}
+
+button:hover {
+    outline: 1px solid white;
+}
+
+label {
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer button {
+    font-size: 2em;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #474747;
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer-socials {
+    font-size: 4em;
+}
+
+/**
+    * Media queries
+    */
+@media (max-width: 1200px) {/* smaller Desktop view (tablet) */
+    
+    nav {
+        left: 35%;
+        padding: 1vh 2vw;
+    }
+    .nav_list a {
+        font-size: 2.5em;
+        padding: 0.5rem 1rem;
+    }
+
+    .webgl {
+        width: 40vw !important;
+        height: 40vh !important;
+    }
+
+    .text p {
+        width: 85%;
+    }
+
+    .swiper-slide {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+
+    .swiper-slide h1,
+    .swiper-slide p,
+    .swiper-slide a{
+        top: 5vh;
+        text-align: left;
+    }
+
+    .swiper-slide h1 {
+        font-size: 3em;
+        width: 90%;
+        
+    }
+
+    .swiper-slide p {
+        font-size: 2em;
+        width: 90%;
+    }
+
+    .swiper-slide .button {
+        font-size: 1.5em;
+        width: 9.2rem;
+        margin-top: 10px;
+    }
+
+    .swiper-slide img {
+        width: 80%;
+        top: 45vh;
+        left: 10vw;
+        
+    }
+
+    .swiper-slide canvas {
+        width: 50% !important;
+        top: 30vh;
+        left: 20vw;
+        
+        
+    }
+    
+
+  
+
+
+}
+
+@media (max-width: 768px) { /* Mobile view */
+    nav {
+        left: 30%;
+        padding: 2vh 2vw;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .nav_list a {
+        font-size: 1.8rem;
+    }
+
+    .swiper {
+        width: 95%;
+        height: 20rem;
+    }
+
+    .swiper-slide h1 {
+        font-size: 2rem;
+    }
+
+    .swiper-slide p {
+        font-size: 0.9rem;
+    }
+
+    .swiper-slide img {
+        width: 30%;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+        grid-row-gap: 2vh;
+    }
+
+    .content h2 {
+        font-size: 4rem;
+    }
+
+    .image-container img {
+        width: 90%;
+    }
+
+    .text {
+        font-size: 1.2rem;
+        margin-left: 3%;
+        margin-top: 3%;
+    }
+
+    .text h1 {
+        font-size: 2.5rem;
+    }
+
+    .form-container {
+        margin-top: 3vh;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        height: 4rem;
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 1.2rem;
+    }
+
+    .pageclip-form__success {
+        font-size: 3rem;
+    }
+
+    label {
+        font-size: 1.2rem;
+    }
+
+    .footer button {
+        font-size: 2vw;
+    }
+
+    .footer-socials {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 480px) { /* small Mobile view */
+    nav {
+        left: 20%;
+        padding: 2vh 3vw;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .nav_list a {
+        font-size: 1.5rem;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 18rem;
+    }
+
+    .swiper-slide h1 {
+        font-size: 1.8rem;
+    }
+
+    .swiper-slide p {
+        font-size: 0.8rem;
+    }
+
+    .swiper-slide img {
+        width: 25%;
+    }
+
+    .content h2 {
+        font-size: 3rem;
+    }
+
+    .text {
+        font-size: 1rem;
+    }
+
+    .text h1 {
+        font-size: 2rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        height: 3.5rem;
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    .pageclip-form__success {
+        font-size: 2.5rem;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    .footer button {
+        font-size: 3vw;
+    }
+
+    .footer-socials {
+        font-size: 5vw;
+    }
+}

@@ -10,8 +10,10 @@
     <base href="/">
     <link rel="stylesheet" href="https://use.typekit.net/gyq5jpu.css">  
     <script src="https://kit.fontawesome.com/1704120139.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/contact.css">
-
+    <link rel="stylesheet" href="../css/mobile-menu.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8" defer></script> 
     <!-- Font -->
 
     
@@ -22,33 +24,32 @@
 
     <!-- navigation + title -->
     <header>
-        <nav>
-            <div class="logo">
+        <div class="logo">
             <a href="../index.html">P<span>.</span>Latour</a>
-            </div>
+        </div>
+        <nav>
             <div class="nav_list">
                 <ul>
                     <li><a href="#Home">Home</a></li>
                     <li><a href="html/projects.html">Projects</a></li>
                     <li><a href="html/aboutme.html">About Me</a></li>
-                    <li><a class="active-page" href="html/contact.html">Contact</a></li>
+                    <li><a class="active-page" href="html/aboutme.html">Contact</a></li>
                 </ul>
             </div>
         </nav>        
     </header>
 
 
-    <section class="content">
+    <section class="form-container">
         <h2>Contact<span>.</span></h2>
-        <form action="https://formsubmit.co/534787@student.fontys.nl" method="POST">
-            <label for="name">Name</label>
-            <input type="text" name="name" required>
-            <label for="email">Email</label>
-            <input type="email" name="email" required>
-            <label for="message">Message</label>
-            <textarea name="message" required></textarea>
-            <input type="hidden" name="_next" value="https://platour.net/thanks.html">
-            <button type="submit">Send</button>
+        <form action="https://send.pageclip.co/43ISAiG09ij1t3iZcTSgGn4zzgc20WmM/Platour" class="pageclip-form" method="post">
+            <label for="name" >Name:</label>
+            <input type="text" name="name" placeholder="Name" required>
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="E-Mail" required>
+            <label for="message">Message:</label>
+            <textarea name="message" required placeholder="Message..." ></textarea>
+            <button type="submit" class="pageclip-form__submit"><span>Send</span></button>
         </form>
     </section>
         <footer>
@@ -64,5 +65,15 @@
                     <a aria-label="instagram"  target="_blank" href="#"><i class="fab fa-instagram"></i></a>                </div>
             </div>
         </footer>
+
+        
+        <script>
+            var form = document.querySelector('.pageclip-form')
+            Pageclip.form(form, {
+            onSubmit: function (event) { },
+            onResponse: function (error, response) { },
+            successTemplate: '<span>Thanks!</span>'
+            })
+        </script>
 </body>
 </html>

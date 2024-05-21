@@ -27,7 +27,6 @@ export default {
         outDir: '../dist', 
         emptyOutDir: true,
         sourcemap: true,
-        chunkSizeWarningLimit: 100000000,
         rollupOptions: {
             input: {
                 main: './src/index.html',
