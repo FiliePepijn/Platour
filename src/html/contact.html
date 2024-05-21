@@ -1,4 +1,6 @@
 
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,9 +12,9 @@
     <base href="/">
     <link rel="stylesheet" href="https://use.typekit.net/gyq5jpu.css">  
     <script src="https://kit.fontawesome.com/1704120139.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/mobile-menu.css">
     <link rel="stylesheet" href="../css/contact.css">
-    <link rel="manifest" href="/src/manifest.webmanifest">
-
+    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
     <!-- Font -->
 
     
@@ -23,33 +25,39 @@
 
     <!-- navigation + title -->
     <header>
+        <h1 href="../index.html">P<span>.</span>Latour</h1>
         <nav>
-            <div class="logo">
-            <a href="../index.html">P<span>.</span>Latour</a>
+            <div class="overlay">
+                <button class="close-button"><i class="fas fa-times"></i></button>
+                <div class="titles">
+                    <h2 class="menu-title">Pepijn Latour<span>.</span></h2>
+                </div>
+                <div class="nav_list">
+                    <ul>
+                        <li><a href="#Home">Home</a></li>
+                        <li><a href="html/projects.html">Projects</a></li>
+                        <li><a href="html/aboutme.html">About Me</a></li>
+                        <li><a class="active-page" href="html/contact.html">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="nav_list">
-                <ul>
-                    <li><a href="#Home">Home</a></li>
-                    <li><a href="html/projects.html">Projects</a></li>
-                    <li><a href="html/aboutme.html">About Me</a></li>
-                    <li><a class="active-page" href="html/contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>        
+        </nav>   
+        <div class="button-container">
+            <button class="Menu-Dropdown">Menu<span>.</span> <i class="fa-solid fa-caret-down"></i></button>
+        </div>      
     </header>
 
 
     <section class="content">
         <h2>Contact<span>.</span></h2>
-        <form action="https://formsubmit.co/el/yikili" method="POST">
-            <label for="name">Name</label>
-            <input type="text" name="name" required>
-            <label for="email">Email</label>
-            <input type="email" name="email" required>
-            <label for="message">Message</label>
-            <textarea name="message" required></textarea>
-            <input type="hidden" name="_next" value="https://platour.net/thanks.html">
-            <button type="submit">Send</button>
+        <form action="https://send.pageclip.co/TT4Wczgt9C2K0GN1LuuSTmRcvnkwlVwV/platour" class="pageclip-form" method="post">
+            <label for="name" >Name:</label>
+            <input type="text" name="name" placeholder="Name" required>
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="E-Mail" required>
+            <label for="message">Message:</label>
+            <textarea name="message" required placeholder="Message..." ></textarea>
+            <button type="submit" class="pageclip-form__submit"><span>Send</span></button>
         </form>
     </section>
         <footer>
@@ -65,5 +73,16 @@
                     <a aria-label="instagram"  target="_blank" href="#"><i class="fab fa-instagram"></i></a>                </div>
             </div>
         </footer>
+
+        <script type="module" src="../JS/menu.js"></script>
+        <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+        <script>
+            var form = document.querySelector('.pageclip-form')
+            Pageclip.form(form, {
+            onSubmit: function (event) { },
+            onResponse: function (error, response) { },
+            successTemplate: '<span>Thanks!</span>'
+            })
+        </script>
 </body>
 </html>
