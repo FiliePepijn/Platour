@@ -250,14 +250,15 @@ footer {
 
 
 /* smaller Desktop view (tablet) */
-@media (max-width: 1200px) {/* smaller Desktop view (tablet) */
+@media (max-width: 1250px) {/* smaller Desktop view (tablet) */
 
     nav {
         left: 35%;
-        padding: 1vh 2vw;
+        padding: 2vh 1vw;
+
     }
     .nav_list a {
-        font-size: 2em;
+        font-size: 3vw;
         padding: 0.5rem 1rem;
     }
 
@@ -388,6 +389,7 @@ footer {
     footer {
         bottom: 10vh;
         position: absolute;
+        text-align: left;
     }
 
     .footer-socials {

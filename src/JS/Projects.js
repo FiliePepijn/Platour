@@ -19,47 +19,35 @@ const closeButton = document.querySelector(".close-button");
 // define the slide index
 var menu = ['AM', 'LO1', 'LO2', 'LO3','LO4','LO5']
 
-    const swiper = new Swiper('.swiper', {
-        modules: [Mousewheel,Pagination,EffectCoverflow,Autoplay],
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        speed: 800,
+const swiper = new Swiper('.swiper', {
+    modules: [Mousewheel, Pagination, Autoplay],
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    speed: 800,
 
-        autoplay: {
-            delay: 2000,
-            disableOnInteraction: true,
-        },
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: true,
+    },
 
-        loop: true,
-        
-        effect : 'coverflow',
-        coverflowEffect: {
-            stretch: 0,
-            depth: 850,
-            modifier: 1,
-            slideShadows: true,
-            scale: 0.3,
-        },
+    loop: true,
 
-        mousewheel: {
+    mousewheel: {
         sensitivity: 2,
         releaseOnEdges: true,
-        },
+    },
 
-        // If we need pagination
-        pagination: {
-        el: '.swiper-pagination', 
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
         clickable: true,
         renderBullet: function (index, className) {
             return '<span class="' + className + '">' + (menu[index]) + '</span>';
         },
-        },
+    },
 
-
-        // And if we need scrollbar
-        scrollbar: {
+    // And if we need scrollbar
+    scrollbar: {
         el: '.swiper-scrollbar',
-        },
-
-    
-    });
+    },
+});
