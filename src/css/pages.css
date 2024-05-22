@@ -117,12 +117,11 @@ span, .logo span {
 }
 
 .swiper-slide h1 {
-    font-size: 4em;   
-    
+    font-size: 3em;
 }
 
 .swiper-slide p {
-    font-size: 2em;
+    font-size: 1em;
 }
 
 .swiper-slide .button {
@@ -150,7 +149,8 @@ span, .logo span {
     position: absolute;
     right: 2%;
     top: 15%;
-    width: 40% !important;
+    width: 50% !important;
+    height: 80% !important;
 }
 
 
@@ -159,7 +159,7 @@ span, .logo span {
     border-radius: 20px !important;
     width: 100px !important;
     height: auto !important;
-    font-size: 2em;
+    font-size: 1em;
     color:white;
     opacity: 1 !important;
     background: rgba(0,0,0,0.2);
@@ -228,7 +228,6 @@ span, .logo span {
 
 .text p {
     margin-top: 1vh;
-    width: 50%;
 }
 
 .text h1 {
@@ -241,8 +240,13 @@ span, .logo span {
     display: flex;
     justify-content: center; 
     align-items: center;     
-    margin-top: 20vh;
+    margin-top: 4vh;
     flex-direction: column;
+}
+
+.form-container h2 {
+    font-size: 3em;
+
 }
 
 form {
@@ -257,33 +261,34 @@ form {
 input[type="text"],
 input[type="email"] {
     width: 100%;
-    height: 5rem;
+    height: 3rem;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
-    font-size: 2em;
-    font-family: 'Coolvetica';
+    font-size: 1.5em;
+    font-family: 'Coolvetica', serif;
     color: red;
 }
 
 textarea {
     width: 100%;
-    height: 10rem;
-    padding: 10px;
+    height: 8rem;
+    padding: 5px;
     margin-bottom: 10px;
     border-radius: 7px;
-    font-size: 2em;
-    font-family: 'Coolvetica';
+    font-size: 1.5em;
+    font-family: 'Coolvetica', serif;
     color: red;
 }
 
 
 button {
-    width: 100%;
-    padding: 15px;
+    width: 25%;
+    margin-left: 37.5%;
+    padding: 10px;
     margin-top: 2vh;
     border-radius: 7px;
-    font-size: 2em;
+    font-size: 1em;
     font-family: 'Coolvetica';
     background-color: red;
     color: white;
@@ -337,7 +342,7 @@ footer {
 }
 
 .footer-socials {
-    font-size: 4em;
+    font-size: 3em;
 }
 
 /**
@@ -350,7 +355,7 @@ footer {
         padding: 1vh 2vw;
     }
     .nav_list a {
-        font-size: 2.5em;
+        font-size: 2em;
         padding: 0.5rem 1rem;
     }
 
@@ -359,13 +364,11 @@ footer {
         height: 40vh !important;
     }
 
-    .text p {
-        width: 85%;
-    }
+
 
     .swiper-slide {
         display: flex !important;
-        flex-direction: column;
+        flex-direction: column !important;
     }
 
 
@@ -383,30 +386,25 @@ footer {
     }
 
     .swiper-slide p {
-        font-size: 2em;
-        width: 90%;
+        font-size: 1em;
+        width: 50%;
     }
 
     .swiper-slide .button {
-        font-size: 1.5em;
-        width: 9.2rem;
+        font-size: 1em;
+        width: 7rem;
         margin-top: 10px;
     }
 
     .swiper-slide img {
-        width: 80%;
-        top: 45vh;
-        left: 10vw;
-        
+        width: 40%;
+
+
     }
 
     .swiper-slide canvas {
-        width: 50% !important;
-        top: 30vh;
-        left: 20vw;
-        
-        
-    }
+        width: 40% !important;
+   }
     
 
   

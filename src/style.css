@@ -176,12 +176,11 @@ header h1{
 }
 
 .swiper-slide h1 {
-    font-size: 4em;   
-    
+    font-size: 3em;
 }
 
 .swiper-slide p {
-    font-size: 2em;
+    font-size: 1em;
 }
 
 .swiper-slide .button {
@@ -220,14 +219,13 @@ canvas {
 
 
 .swiper-pagination-bullet {
-    padding: 15px 20px 15px 20px;
+    padding: 15px 5px 15px 5px;
     border-radius: 20px !important;
-    width: auto !important;
+    width: 50px !important;
     height: auto !important;
-    font-size: 1rem;
+    font-size: 1em;
     color:white;
     opacity: 1 !important;
-
     background: rgba(0,0,0,0.2);
 }
 
@@ -242,137 +240,250 @@ canvas {
 footer {
     width: 100%;
     margin-top: 10vh;
-}
-
-.footer {
     text-align: center;
 }
 
-.footer button {
-    font-size: 2em;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #474747;
-    color: #fff;
-    cursor: pointer;
-}
 
 .footer-socials {
-    font-size: 4em;
+    font-size: 3em;
 }
-
 
 
 /* smaller Desktop view (tablet) */
-@media screen and (max-width: 1023px) and (min-width: 768px){
-    .desktop {
-        display: block;
+@media (max-width: 1200px) {/* smaller Desktop view (tablet) */
+
+    nav {
+        left: 35%;
+        padding: 1vh 2vw;
     }
-    .mobile {
-        display: none;
+    .nav_list a {
+        font-size: 2em;
+        padding: 0.5rem 1rem;
+    }
+
+    .webgl {
+        width: 40vw !important;
+        height: 40vh !important;
+    }
+
+
+
+    .swiper-slide {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+
+    .swiper-slide h1,
+    .swiper-slide p,
+    .swiper-slide a{
+        top: 5vh;
+        text-align: left;
+    }
+
+    .swiper-slide h1 {
+        font-size: 3em;
+        width: 50%;
 
     }
 
+    .swiper-slide p {
+        font-size: 1em;
+        width: 50%;
+    }
+
+    .swiper-slide .button {
+        font-size: 1em;
+        width: 7rem;
+        margin-top: 10px;
+    }
+
+    .swiper-slide img {
+        width: 40%;
+
+
+    }
+
+    .swiper-slide canvas {
+        width: 40% !important;
+    }
 }
-/* Mobile view */
+
 @media screen and (max-width: 767px) {
     .desktop, .logo{
         display: none;
     }
-    .mobile {
-        display: block;
+
+
+
+    .titles {
+        position: absolute;
+        margin-bottom: 0;
+        margin-top: 15vh;
+        justify-content: flex-start;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        left: 3vw;
+    }
+
+    .titles h1, .titles h2 {
+        font-size: 2.5em;
+        margin: 0;
+        padding: 0;
+        outline: none;
+
+
+    }
+    /* Navigation bar */
+    nav {
+        position: absolute;
+        left: 3vw;
+        top: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(0, 0, 0, 0) ;
+        padding: 0;
+        z-index: 1000;
+
+    }
+
+    /* Navigation list */
+    .nav_list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+
+    }
+
+    .nav_list ul {
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+    }
+
+
+    .nav_list a {
+        padding: 0;
+        border-radius: 15px;
+        transition: outline 0.3s ease-in-out;
+        font-size: 2.5rem;
+        width: 100%;
+    }
+
+
+
+    .swiper {
+        display:none !important;
+    }
+
+    .scrollDown-container {
+        display: none;
+    }
+
+
+
+    footer {
+        bottom: 10vh;
+        position: absolute;
+    }
+
+    .footer-socials {
+        font-size: 2em;
     }
 
     span{
         color: red;
     }
 
-    header {
-        position: relative;
-        height: auto;
+}
+
+/* Mobile view */
+@media screen and (max-width: 480px) {
+    .desktop, .logo{
+        display: none;
     }
 
-    h2{
-        margin: 0;
-    }
-    
+
+
     .titles {
-        margin-left: 5vw;
-        margin-top: 10vh;
+        position: absolute;
+        margin-bottom: 0;
+        margin-top: 15vh;
+        justify-content: flex-start;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        left: 3vw;
     }
 
-    .titles h2 {
-        font-size: 5rem;
-        width: 50vw;
+    .titles h1, .titles h2 {
+        font-size: 2.5em;
+        margin: 0;
+        padding: 0;
         outline: none;
-        padding: 0;        
+
+
+    }
+    /* Navigation bar */
+    nav {
+        position: absolute;
+        left: 3vw;
+        top: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(0, 0, 0, 0) ;
+        padding: 0;
+        z-index: 1000;
+
     }
 
+    /* Navigation list */
     .nav_list {
         display: flex;
-        position: absolute;
-        background-color: black; 
-        transform: translate(0px, 1vw);
-        margin-left: 5vw;
-        
-        
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+
     }
 
-     .nav_list ul {
-        font-size: 1.5rem;
-        list-style: none;  
-        padding: 0;  
-    } 
-
-    .nav_list ul li {
-        margin: 10px 0;
+    .nav_list ul {
+        display: flex;
+        list-style: none;
+        flex-direction: column;
     }
 
 
     .nav_list a {
-        position: relative;
-        text-decoration: none;
-        color: white;
-    }
-    
-    .nav_list a:hover {
-        color: red;
-    }
-
-    h1{
-        font-size: 1rem;
-    }
-    footer {
-        position: fixed;
-        bottom: 5vw;
-        width: 100%;
-        background-color: black;
-        color: white;
-        text-align: left;
-        padding: 10px 0;
-        margin-left: 5vw;
-    }
-
-    .footer button{
-        font-family: coolvetica;
-        font-size: 5vw;
         padding: 0;
-        background-color: black;
-        border: none;
-        color: #fff;
+        border-radius: 15px;
+        transition: outline 0.3s ease-in-out;
+        font-size: 2.5rem;
+        width: 100%;
     }
 
-    .footer-socials {
-        font-size: 5vw;
-        color: white ;
-        text-decoration: none;
+
+
+    .swiper {
+        display:none !important;
     }
 
-    .footer-socials a {
-        font-size: 7vw;
+    .scrollDown-container {
+        display: none;
+    }
+
+
+
+    footer {
+        display: none;
+    }
+
+
+    span{
         color: red;
-        padding: 0px 20px 0px 0px;
     }
-}
 
+}
