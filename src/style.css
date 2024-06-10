@@ -336,18 +336,56 @@ footer {
 
 
     }
+    /*!* Navigation bar *!*/
+    /*nav {*/
+    /*    position: absolute;*/
+    /*    left: 3vw;*/
+    /*    top: 40vh;*/
+    /*    display: flex;*/
+    /*    align-items: center;*/
+    /*    justify-content: center;*/
+    /*    background-color: rgb(0, 0, 0, 0) ;*/
+    /*    padding: 0;*/
+    /*    z-index: 1000;*/
+
+    /*}*/
+
+    /*!* Navigation list *!*/
+    /*.nav_list {*/
+    /*    display: flex;*/
+    /*    justify-content: center;*/
+    /*    align-items: center;*/
+    /*    margin-top: 2rem;*/
+
+    /*}*/
+
+    /*.nav_list ul {*/
+    /*    display: flex;*/
+    /*    list-style: none;*/
+    /*    flex-direction: column;*/
+    /*}*/
+
+
+    /*.nav_list a {*/
+    /*    padding: 0;*/
+    /*    border-radius: 15px;*/
+    /*    transition: outline 0.3s ease-in-out;*/
+    /*    font-size: 2.5rem;*/
+    /*    width: 100%;*/
+    /*}*/
+
+
     /* Navigation bar */
     nav {
         position: absolute;
-        left: 3vw;
-        top: 40vh;
+        left: 40%;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: rgb(0, 0, 0, 0) ;
-        padding: 0;
+        background-color: black;
+        padding: 2vh 1vw;
+        top: 0;
         z-index: 1000;
-
     }
 
     /* Navigation list */
@@ -355,25 +393,35 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 2rem;
-
+        margin-top: 1rem;
     }
 
     .nav_list ul {
         display: flex;
         list-style: none;
-        flex-direction: column;
     }
 
-
     .nav_list a {
-        padding: 0;
+        padding: 0.5rem 1.5rem;
         border-radius: 15px;
         transition: outline 0.3s ease-in-out;
         font-size: 2.5rem;
         width: 100%;
     }
 
+    .active-page {
+        color: red;
+    }
+
+    .nav_list a:hover {
+        outline: 0.3rem solid white;
+    }
+
+    /* Logo upper left */
+    .logo {
+        font-size: 4rem;
+        text-align: left;
+    }
 
 
     .swiper {

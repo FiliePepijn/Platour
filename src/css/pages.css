@@ -38,16 +38,9 @@ nav {
     align-items: center;
     justify-content: center;
     background-color: black;
-    padding: 2vh 1vw; 
+    padding: 2vh 1vw;
     top: 0;
     z-index: 1000;
-}
-
-header h1 {
-    position: absolute;
-    font-size: 3rem;
-    margin-top: 1rem;
-    margin-left: 1rem; 
 }
 
 /* Navigation list */
@@ -82,12 +75,18 @@ header h1 {
 /* Logo upper left */
 .logo {
     margin: 1vw;
-    font-size: 4rem;  
+    font-size: 4rem;
     text-align: left;
 }
-
 span, .logo span {
     color: red;
+}
+
+header h1 {
+    position: absolute;
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
 }
 
 /* carousel */
@@ -200,20 +199,35 @@ span, .logo span {
 }
 
 /* ------------------------------- Content */
-.content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    grid-row-gap:1rem ;
+    width: 100%;
+
 }
 
-.section {
-    display:grid;
-    grid-template-columns:1fr 1fr;
+section h2 {
+    margin-left: 1rem;
+    font-size: 3rem !important;
+    grid-column: 1/3;
 }
 
-.text, .image-container,.canvas-container {
+.text,.canvas-container {
     padding: 20px;
     align-self: center;
+}
+.image-container {
+    align-self: center;
+    justify-self: center;
+}
+
+.image-container img {
+    width: 24vw;
+    height: auto;
 }
 
 .link {
@@ -225,6 +239,7 @@ span, .logo span {
 
 .text p {
     margin-top: 1vh;
+    font-size: 1.2rem;
 }
 
 .text h1 {
@@ -233,10 +248,9 @@ span, .logo span {
     
 }
 
-.image-container img {
-    width: 100%;
-    height: auto;
-}
+
+
+
 
 
 
@@ -488,14 +502,7 @@ footer {
     }
 
 
-    .content {
-        grid-template-columns: 1fr;
-        grid-row-gap: 2vh;
-    }
 
-    .content h2 {
-        font-size: 4rem;
-    }
 
     .image-container img {
         width: 90%;
@@ -610,7 +617,7 @@ footer {
     }
 
 
-    .section {
+    section {
         flex-direction: column;
     }
 
