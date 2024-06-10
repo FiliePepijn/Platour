@@ -1,6 +1,4 @@
 
-
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,8 +11,9 @@
     <link rel="stylesheet" href="https://use.typekit.net/gyq5jpu.css">  
     <script src="https://kit.fontawesome.com/1704120139.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/mobile-menu.css">
-    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/pages.css">
     <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8" defer></script>
     <!-- Font -->
 
     
@@ -25,32 +24,25 @@
 
     <!-- navigation + title -->
     <header>
-        <h1 href="../index.html">P<span>.</span>Latour</h1>
+        <div class="logo">
+            <a href="../index.html">P<span>.</span>Latour</a>
+        </div>
         <nav>
-            <div class="overlay">
-                <button class="close-button"><i class="fas fa-times"></i></button>
-                <div class="titles">
-                    <h2 class="menu-title">Pepijn Latour<span>.</span></h2>
-                </div>
-                <div class="nav_list">
-                    <ul>
-                        <li><a href="#Home">Home</a></li>
-                        <li><a href="html/projects.html">Projects</a></li>
-                        <li><a href="html/aboutme.html">About Me</a></li>
-                        <li><a class="active-page" href="html/contact.html">Contact</a></li>
-                    </ul>
-                </div>
+            <div class="nav_list">
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="html/projects.html">Projects</a></li>
+                    <li><a href="html/aboutme.html">About Me</a></li>
+                    <li><a class="active-page" href="html/aboutme.html">Contact</a></li>
+                </ul>
             </div>
-        </nav>   
-        <div class="button-container">
-            <button class="Menu-Dropdown">Menu<span>.</span> <i class="fa-solid fa-caret-down"></i></button>
-        </div>      
+        </nav>        
     </header>
 
 
-    <section class="content">
+    <section class="form-container">
         <h2>Contact<span>.</span></h2>
-        <form action="https://send.pageclip.co/TT4Wczgt9C2K0GN1LuuSTmRcvnkwlVwV/platour" class="pageclip-form" method="post">
+        <form action="https://send.pageclip.co/43ISAiG09ij1t3iZcTSgGn4zzgc20WmM/Platour" class="pageclip-form" method="post">
             <label for="name" >Name:</label>
             <input type="text" name="name" placeholder="Name" required>
             <label for="email">Email:</label>
@@ -74,8 +66,7 @@
             </div>
         </footer>
 
-        <script type="module" src="../JS/menu.js"></script>
-        <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+
         <script>
             var form = document.querySelector('.pageclip-form')
             Pageclip.form(form, {

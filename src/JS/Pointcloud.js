@@ -22,26 +22,17 @@ const renderer = new THREE.WebGLRenderer({
 
 
 var sizes = {
-    width: window.innerWidth / 4,
-    height: window.innerHeight / 1
+    width: canvas.clientWidth ,
+    height: canvas.clientHeight 
 }
 renderer.setSize(sizes.width, sizes.height);
 
 
 
-
-window.addEventListener("resize", () => {
-    sizes.width = window.innerWidth / 3;
-    sizes.height = window.innerHeight / 1;
-    renderer.setSize(sizes.width, sizes.height);
-    camera.aspect = sizes.width / sizes.height;
-    camera.updateProjectionMatrix();
-});
-
 // Initialize camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width/sizes.height, 0.1, 1000);
 scene.add(camera);
-camera.position.set(0,0,9);
+camera.position.set(0,0,6);
 
 
 
