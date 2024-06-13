@@ -17,7 +17,7 @@ const closeButton = document.querySelector(".close-button");
 
 
 // define the slide index
-var menu = ['AM', 'LO1', 'LO2', 'LO3','LO4','LO5']
+var menu = ['LO1', 'LO2', 'LO3','LO4','LO5']
 
 const swiper = new Swiper('.swiper', {
     modules: [Mousewheel, Pagination, Autoplay],

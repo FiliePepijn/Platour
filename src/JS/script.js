@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 
 
 // define the slide index
-var menu = ['AM', 'LO1', 'LO2', 'LO3','LO4','LO5']
+var menu = ['LO1', 'LO2', 'LO3','LO4','LO5']
 
 // define prev and next buttons
 const scrollDown = document.getElementsByClassName("scrollDown")[0];
