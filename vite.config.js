@@ -49,10 +49,10 @@ export default {
                 fontys_ovp_research: './src/documents/fontys-ovp-research.pdf',
                 fontys_ovp_survey: './src/documents/fontys-ovp-survey.pdf',
 
-                portfolio_design1: './src/documents/portfolioDesign1.pdf',
-                portfolio_design2: './src/documents/portfolioDesign2.pdf',
-                portfolio_feedback: './src/documents/portfolioFeedback.pdf',
-                portfolio_inspiration: './src/documents/portfolioInspiration.pdf',
+                portfolio_design1: './src/documents/portfoliodesign1.pdf',
+                portfolio_design2: './src/documents/portfoliodesign2.pdf',
+                portfolio_feedback: './src/documents/PortfolioFeedback.pdf',
+                portfolio_inspiration: './src/documents/PortFolioInspiration.pdf',
 
                 sprint_x_design: './src/documents/sprint-x-design.pdf',
                 sprint_x_interview: './src/documents/sprint-X-interview.m4a',
