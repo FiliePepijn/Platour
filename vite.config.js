@@ -5,7 +5,6 @@ import DynamicPublicDirectory from "vite-multiple-assets";
 export default {
     
     root: 'src/',
-
     base: './',
     server:
     {
@@ -30,32 +29,6 @@ export default {
                 personal: './src/html/personal.html',
                 development: './src/html/development.html',
 
-                // BB_feedback: './src/documents/BB-feedback-ppt.pdf',
-                // BB_final_logos: './src/documents/BB-Final-Logos.pdf',
-                // BB_ppt: './src/documents/BB-ppt.pdf',
-                //
-                //
-                // fontys_ovp_1: './src/documents/fontys-ovp-1.pdf',
-                // fontys_ovp_2: './src/documents/fontys-ovp-2.pdf',
-                // fontys_ovp_answers: './src/documents/fontys-ovp-answers.pdf',
-                // fontys_ovp_antwoorden: './src/documents/fontys-ovp-antwoorden.pdf',
-                // fontys_ovp_final: './src/documents/fontys-ovp-final.pdf',
-                // fontys_ovp_interview: './src/documents/fontys-ovp-interview.m4a',
-                // fontys_ovp_phone: './src/documents/fontys-ovp-phone.pdf',
-                // fontys_ovp_research: './src/documents/fontys-ovp-research.pdf',
-                // fontys_ovp_survey: './src/documents/fontys-ovp-survey.pdf',
-                //
-                // portfolio_design1: './src/documents/portfoliodesign1.pdf',
-                // portfolio_design2: './src/documents/portfoliodesign2.pdf',
-                // portfolio_feedback: './src/documents/PortfolioFeedback.pdf',
-                // portfolio_inspiration: './src/documents/PortFolioInspiration.pdf',
-                //
-                // sprint_x_design: './src/documents/sprint-x-design.pdf',
-                // sprint_x_interview: './src/documents/sprint-X-interview.m4a',
-                // sprint_x_planning: './src/documents/sprint-x-planning.pdf',
-                // sprint_x_xdfile: './src/documents/sprint-x-xdfile.xd',
-                // sprint_x_reserach: './src/documents/sprint-x-research.pdf',
-                //
 
 
 

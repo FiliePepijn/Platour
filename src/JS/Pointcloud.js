@@ -13,15 +13,13 @@ import pcd from '../pcd/PepijnPCD.pcd';
 const canvas = document.querySelector('canvas.webgl');
 const scene = new THREE.Scene();
 
-
-
-
+// Initialize renderer
 const renderer = new THREE.WebGLRenderer({
     canvas: canvas,
 }); 
 
 
-var sizes = {
+let sizes = {
     width: canvas.clientWidth ,
     height: canvas.clientHeight 
 }
@@ -49,7 +47,7 @@ controls.maxPolarAngle = Math.PI/2;
 
 
 function autoRotate() {
-    var rotationspeed = 2;
+    let rotationspeed = 2;
 
     controls.autoRotate = true;
     controls.autoRotateSpeed = rotationspeed; 

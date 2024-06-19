@@ -18,6 +18,7 @@ const carouselSection = document.getElementsByClassName("swiper")[0];
 
 window.addEventListener("scroll", toggleScrollButton);
 
+//scrollbutton
 function toggleScrollButton() {
     if (window.scrollY >= carouselSection.getBoundingClientRect().top) {
         scrollDown.innerHTML = "Scroll <i class='fa-solid fa-caret-up'></i>";
@@ -26,9 +27,10 @@ function toggleScrollButton() {
 
     }
 }
-
+//scrollbutton call
 scrollDown.addEventListener("click", scrollTarget);
 
+//scrollbutton target function
 function scrollTarget() {
     if (window.scrollY >= carouselSection.getBoundingClientRect().top) {
         scrollDown.innerHTML = "Scroll <i class='fa-solid fa-caret-down'></i>";
@@ -39,6 +41,7 @@ function scrollTarget() {
     }
 }
 
+//scroll animation
 function autoScroll(scrollTarget, offset = 0) {
   scrollTarget.scrollIntoView({
       behavior: "smooth",
@@ -49,7 +52,7 @@ function autoScroll(scrollTarget, offset = 0) {
 }
 
 
-
+// swiper js
 const swiper = new Swiper('.swiper', {
   modules: [Mousewheel,Pagination,Autoplay],
   direction: 'horizontal',
