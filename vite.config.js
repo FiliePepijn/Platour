@@ -13,7 +13,7 @@ export default {
         host: true, 
         
     },
-    assetsInclude: ['**/*.pcd'],
+    assetsInclude: ['**/*.pcd', '**/*.pdf', '**/*.m4a', '**/*.xd'],
     plugins: [
         qrcode(),
     ],
