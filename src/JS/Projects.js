@@ -23,6 +23,8 @@ const swiper = new Swiper('.swiper', {
     modules: [Mousewheel, Pagination, Autoplay],
     centeredSlides: true,
     slidesPerView: 'auto',
+
+    direction: 'vertical',
     speed: 800,
 
     autoplay: {

@@ -52,7 +52,7 @@ function autoScroll(scrollTarget, offset = 0) {
 
 const swiper = new Swiper('.swiper', {
   modules: [Mousewheel,Pagination,Autoplay],
-  direction: 'vertical',
+  direction: 'horizontal',
   loop: true,
   centeredSlides: true,
   speed: 800,
