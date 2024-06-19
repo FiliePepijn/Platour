@@ -19,7 +19,8 @@ export default {
     ],
     build:
     {
-        outDir: '../dist', 
+        outDir: '../dist',
+        publicDir: './src/',
         emptyOutDir: true,
         sourcemap: true,
         rollupOptions: {
