@@ -20,7 +20,7 @@ export default {
     build:
     {
         outDir: '../dist',
-        publicDir: './src/',
+        publicDir: './src/documents',
         emptyOutDir: true,
         sourcemap: true,
         rollupOptions: {
