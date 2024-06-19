@@ -30,7 +30,10 @@ body {
     display: none;
 }
 
-/* Navigation bar */
+/**
+* Navigation
+ */
+
 nav {
     position: absolute;
     left: 40%;
@@ -43,7 +46,7 @@ nav {
     z-index: 1000;
 }
 
-/* Navigation list */
+
 .nav_list {
     display: flex;
     justify-content: center;
@@ -72,12 +75,15 @@ nav {
     outline: 0.3rem solid white;
 }
 
-/* Logo upper left */
 .logo {
     margin: 1vw;
     font-size: 4rem;
     text-align: left;
 }
+
+/**
+* Header
+ */
 span, .logo span {
     color: red;
 }
@@ -89,7 +95,10 @@ header h1 {
     margin-left: 1rem;
 }
 
-/* carousel */
+
+/**
+* Swiper JS
+ */
 .swiper {
     margin-top: 5vh;
     width: 90%;
@@ -184,7 +193,7 @@ header h1 {
     margin-bottom: 20px;
 }
 .page-title span {
-    color: #ff0000; /* Red accent color */
+    color: #ff0000;
 }
 
 /*pointcloud*/
@@ -198,7 +207,10 @@ header h1 {
     width: 100% !important;
 }
 
-/* ------------------------------- Content */
+/**
+* Sections
+ Page contents
+ */
 
 
 section {
@@ -228,11 +240,11 @@ section h2 {
 
 }
 
-/*figure {*/
-/*    text-align: center;*/
-/*    height: 100%;*/
-/*    width: 100%;*/
-/*}*/
+figure {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
 
 
 
@@ -260,7 +272,10 @@ section h2 {
     
 }
 
-/*personality traits*/
+
+/**
+* Personality test results
+ */
 section .personality-container{
     padding: 20px;
     border-radius: 8px;
@@ -301,9 +316,10 @@ section .personality-trait span {
 
 
 
+/**
+* Contact form
 
-
-/* --------------------------- Contact form */
+ */
 .form-container {
     display: flex;
     justify-content: center; 
@@ -388,7 +404,10 @@ label {
     color: white;
 }
 
-/* --------------------------- Footer */
+/**
+* Footer
+
+ */
 footer {
     display: flex;
     justify-content: center;

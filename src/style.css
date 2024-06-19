@@ -12,8 +12,6 @@ body {
 }
 
 
-
-/* reset body to defualt */
 body * {
     margin: 0;
     padding: 0;
@@ -23,11 +21,9 @@ body * {
 }
 
 
-
-
-
-
-/* Navigation bar */
+/**
+Nigation bar
+ */
 nav {
     position: absolute;
     left: 40%;
@@ -41,7 +37,7 @@ nav {
 }
 
 
-/* Navigation list */
+
 .nav_list {
     display: flex;
     justify-content: center;
@@ -78,6 +74,11 @@ nav {
     text-align: left;
 }
 
+
+
+/**
+Titles
+ */
 header h1{
     position: absolute;
     font-size: 3rem;
@@ -85,7 +86,7 @@ header h1{
     margin-left: 1rem;
 }
 
-/* Title */
+
 .titles {
     margin-top: 22vh;
     margin-bottom: 22vh;
@@ -102,8 +103,6 @@ header h1{
 }
 
 
-
-/*extra styling for h2*/
 .titles h2 {
     font-size: 11vw;
     font-size: 11vw;
@@ -115,11 +114,15 @@ header h1{
     margin: 10px;
 }
 
-/*red dot h2*/
+
 .titles h2 span, .logo span {
     color: red;
 }
 
+
+/**
+Scroll down button
+ */
 .scrollDown-container {
     display: flex;
     justify-content: center;
@@ -149,7 +152,9 @@ header h1{
 
 
 
-/* carousel */
+/**
+Swiper JS
+ */
 .swiper {
     margin-top: 0vh;
     width: 80%;
@@ -237,7 +242,9 @@ canvas {
     background: red !important;
 }
 
-/* Footer */
+/**
+Footer
+ */
 footer {
     width: 100%;
     margin-top: 10vh;
@@ -253,9 +260,14 @@ footer {
 
 
 
-/* smaller Desktop view (tablet) */
+/**
+Media query Tablet
+ */
 @media (max-width: 1250px) {/* smaller Desktop view (tablet) */
 
+    /**
+    Navigation
+     */
     nav {
         left: 35%;
         padding: 2vh 1vw;
@@ -266,13 +278,18 @@ footer {
         padding: 0.5rem 1rem;
     }
 
+    /**
+    3d canvas
+     */
     .webgl {
         width: 40vw !important;
         height: 40vh !important;
     }
 
 
-
+    /**
+    Swiper js
+     */
     .swiper-slide {
         display: flex !important;
         flex-direction: column !important;
@@ -316,13 +333,18 @@ footer {
     }
 }
 
+/**
+Media query Mobile
+ */
 @media screen and (max-width: 767px) {
     .desktop, .logo{
         display: none;
     }
 
 
-
+    /**
+    Titles
+     */
     .titles {
         position: absolute;
         margin-bottom: 0;
@@ -342,7 +364,10 @@ footer {
 
 
     }
-    /* Navigation bar */
+
+    /**
+    Navigation
+     */
     nav {
         position: absolute;
         left: 3vw;
@@ -372,9 +397,6 @@ footer {
     }
 
 
-
-
-    /* Navigation list */
     .nav_list {
         display: flex;
         justify-content: center;
@@ -409,17 +431,22 @@ footer {
         text-align: left;
     }
 
-
+    /**
+    Swiper js
+     */
     .swiper {
         display:none !important;
     }
 
+    /** disable scoll down button */
     .scrollDown-container {
         display: none;
     }
 
 
-
+    /**
+    Footer
+     */
     footer {
         bottom: 10vh;
         position: absolute;
@@ -436,14 +463,20 @@ footer {
 
 }
 
-/* Mobile view */
+/**
+Media query Mobile
+ */
 @media screen and (max-width: 480px) {
+
+
     .desktop, .logo{
         display: none;
     }
 
 
-
+    /**
+    Titles
+     */
     .titles {
         position: absolute;
         margin-bottom: 0;
@@ -455,6 +488,9 @@ footer {
         left: 3vw;
     }
 
+    /**
+    Titles
+     */
     .titles h1, .titles h2 {
         font-size: 2.5em;
         margin: 0;
@@ -463,7 +499,10 @@ footer {
 
 
     }
-    /* Navigation bar */
+
+    /**
+    Navigation
+     */
     nav {
         position: absolute;
         left: 3vw;
@@ -477,7 +516,6 @@ footer {
 
     }
 
-    /* Navigation list */
     .nav_list {
         display: flex;
         justify-content: center;
@@ -502,17 +540,23 @@ footer {
     }
 
 
-
+    /**
+    Swiper js
+     */
     .swiper {
         display:none !important;
     }
 
+
+    /** disable scoll down button */
     .scrollDown-container {
         display: none;
     }
 
 
-
+    /**
+    Footer
+     */
     footer {
         display: none;
     }

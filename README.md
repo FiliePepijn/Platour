@@ -57,15 +57,23 @@ npm install
 npm run dev
 ```
 
+#### build (run Local)
+First run: (this will create a dist folder with the build files)
+```bash
+npm run build
+```
+
+Then run:
+```bash
+npm run preview
+```
+
 #### Deploy
 ```bash
 npm run build
 ```
 
 
-
-
-    
 ## Roadmap
 
 - Create a WPA
